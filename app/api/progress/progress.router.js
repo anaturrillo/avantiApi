@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var express_1 = require("express");
+var controller_1 = require("../controller");
+var progress_controllers_1 = require("./progress.controllers");
+var router = express_1.Router();
+router.get('/', controller_1.respond(progress_controllers_1.findProgresssController));
+router.get('/:progressId', controller_1.respond(progress_controllers_1.findProgressByIdController));
+router.post('/', controller_1.respond(progress_controllers_1.createProgressController));
+router.put('/:progressId', controller_1.respond(progress_controllers_1.editProgressController));
+router["delete"]('/:progressId', controller_1.respond(progress_controllers_1.removeProgressController));
+exports["default"] = router;

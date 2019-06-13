@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var express_1 = require("express");
+var controller_1 = require("../controller");
+var user_controller_1 = require("./user.controller");
+var router = express_1.Router();
+router.get('/', controller_1.respond(user_controller_1.findUsersController));
+router.get('/:userId', controller_1.respond(user_controller_1.findUserByIdController));
+router.post('/', controller_1.respond(user_controller_1.createUserController));
+router.put('/:userId', controller_1.respond(user_controller_1.editUserController));
+router["delete"]('/:userId', controller_1.respond(user_controller_1.removeUserController));
+exports["default"] = router;

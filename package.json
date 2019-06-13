@@ -1,0 +1,25 @@
+{
+  "name": "avantiapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-nodemon app/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chance": "^1.0.4",
+    "@types/express": "^4.17.0",
+    "@types/mongoose": "^5.5.5",
+    "chance": "^1.0.18",
+    "express": "^4.17.1",
+    "mongoose": "^5.5.12",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1"
+  },
+  "devDependencies": {
+    "@trongnd/ts-nodemon": "^1.0.3"
+  }
+}

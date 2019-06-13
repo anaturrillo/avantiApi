@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var express_1 = require("express");
+var controller_1 = require("../controller");
+var routine_controllers_1 = require("./routine.controllers");
+var router = express_1.Router();
+router.get('/', controller_1.respond(routine_controllers_1.findRoutinesController));
+router.get('/:routineId', controller_1.respond(routine_controllers_1.findRoutineByIdController));
+router.post('/', controller_1.respond(routine_controllers_1.createRoutineController));
+router.put('/:routineId', controller_1.respond(routine_controllers_1.editRoutineController));
+router["delete"]('/:routineId', controller_1.respond(routine_controllers_1.removeRoutineController));
+router.post('/:routineId/exercises', controller_1.respond(routine_controllers_1.addExerciseController));
+exports["default"] = router;

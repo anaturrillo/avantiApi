@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var express_1 = require("express");
+var controller_1 = require("../controller");
+var exercise_controller_1 = require("./exercise.controller");
+var router = express_1.Router();
+router.get('/', controller_1.respond(exercise_controller_1.findExercisesController));
+router.get('/:exerciseId', controller_1.respond(exercise_controller_1.findExerciseByIdController));
+router.post('/', controller_1.respond(exercise_controller_1.createExerciseController));
+router.put('/:exerciseId', controller_1.respond(exercise_controller_1.editExerciseController));
+router["delete"]('/:exerciseId', controller_1.respond(exercise_controller_1.removeExerciseController));
+exports["default"] = router;
